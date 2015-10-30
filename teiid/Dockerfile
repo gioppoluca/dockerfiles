@@ -10,6 +10,6 @@ ses/content/org/jboss/teiid/teiid/8.12.0.Final/teiid-8.12.0.Final-server.zip \
   && mv $HOME/teiid-8.12.0.Final $JBOSS_HOME \
   && rm teiid-8.12.0.Final-server.zip
 
-EXPOSE 8080 9999 9990 4447
+EXPOSE 4447 8080 9990 9999 31000 35432
 
-CMD ["/opt/jboss/jbossas/bin/standalone.sh", "-b", "0.0.0.0"]
+CMD ["/opt/jboss/jbossas/bin/standalone.sh", "-b", "0.0.0.0", "--server-config=standalone-teiid.xml"]
